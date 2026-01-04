@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéDex - Bootstrap Edition</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .pokemon-card {
+            transition: transform 0.3s;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .pokemon-card:hover {
+            transform: translateY(-10px);
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1613771404721-1f92d799e49f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+        .bg-pokemon-red { background-color: #ef5350; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-pokemon-red sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">PokéDex</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Types.html">Types</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Legendaries.html">Legendaries</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Gotta Catch 'Em All!</h1>
+            <p class="lead">Explore the world of Pokémon with Bootstrap 5.</p>
+            <a href="#gallery" class="btn btn-warning btn-lg fw-bold">Explore Pokémon Types</a>
+        </div>
+    </header>
+
+	<section id="gallery" class="container py-5">
+        <div class="row text-center mb-5">
+            <div class="col">
+                <h2 class="fw-bold">Pokémon Types</h2>
+                <hr class="w-25 mx-auto border-danger border-3">
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-2">
+                <div class="card pokemon-card h-100">
+                    <a href="https://bulbapedia.bulbagarden.net/wiki/Normal_(type)">
+					<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dg5qlwu-39ba4983-2c35-40ce-b62e-c230e4ecfdcf.png/v1/fill/w_894,h_894/normal_type_symbol_paldea_by_jormxdos_dg5qlwu-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiIvZi9lOGRkYzRkYS0yM2RkLTQ1MDItYjY1Yi0zNzhjOWNmZTVlZmEvZGc1cWx3dS0zOWJhNDk4My0yYzM1LTQwY2UtYjYyZS1jMjMwZTRlY2ZkY2YucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.r6XSbErWZF7HKIACXEidZ9kb9dhiP-_KjoTQXI90k2c" class="card-img-top p-4" alt="Normal">
+                    <div class="card-body text-center">
+                        <span class="badge mb-2" style="font-size: 20px; background-color: #c3beb5">Normal</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card pokemon-card h-100">
+					 <a href="https://bulbapedia.bulbagarden.net/wiki/Fighting_(type)">
+					<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dg5qlys-bd5a35fd-8453-47bb-998b-142b7c08982e.png/v1/fill/w_894,h_894/fighting_type_symbol_paldea_by_jormxdos_dg5qlys-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiIvZi9lOGRkYzRkYS0yM2RkLTQ1MDItYjY1Yi0zNzhjOWNmZTVlZmEvZGc1cWx5cy1iZDVhMzVmZC04NDUzLTQ3YmItOTk4Yi0xNDJiN2MwODk4MmUucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.mwHi5ypnuVW8zc0oHs0z2YhKSc7ICkxyaMHEQm8_AUw" class="card-img-top p-4" alt="Fighting">
+                    <div class="card-body text-center">
+                        <span class="badge mb-2" style="font-size: 20px; background-color: #fbb615">Fighting</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card pokemon-card h-100">
+					 <a href="https://bulbapedia.bulbagarden.net/wiki/Flying_(type)">
+					<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dg5qlzt-c80451ac-2d4e-4f29-b0ff-d03834607984.png/v1/fill/w_894,h_894/flying_type_symbol_paldea_by_jormxdos_dg5qlzt-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiIvZi9lOGRkYzRkYS0yM2RkLTQ1MDItYjY1Yi0zNzhjOWNmZTVlZmEvZGc1cWx6dC1jODA0NTFhYy0yZDRlLTRmMjktYjBmZi1kMDM4MzQ2MDc5ODQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.283OeLvAt175m8hSIFYxf_i3amiOogDkyszS9Xz9OG8" class="card-img-top p-4" alt="Flying">
+                    <div class="card-body text-center">
+                        <span class="badge mb-2" style="font-size: 20px; background-color: #93d5e8">Flying</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card pokemon-card h-100">
+					 <a href="https://bulbapedia.bulbagarden.net/wiki/Poison_(type)">
+					<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dg5qlzf-28d81473-d1f0-49d0-943b-c5e7885aea1e.png/v1/fill/w_894,h_894/ground_type_symbol_paldea_by_jormxdos_dg5qlzf-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiIvZi9lOGRkYzRkYS0yM2RkLTQ1MDItYjY1Yi0zNzhjOWNmZTVlZmEvZGc1cWx6Zi0yOGQ4MTQ3My1kMWYwLTQ5ZDAtOTQzYi1jNWU3ODg1YWVhMWUucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ._CBTS79Iv0yYi0DNzwkBae-qdFWqA3a9V1kkZwqVlio" class="card-img-top p-4" alt="Ground">
+                    <div class="card-body text-center">
+                        <span class="badge mb-2" style="font-size: 20px; background-color: #c6883b">Ground</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-md-2">
+                <div class="card pokemon-card h-100">
+					 <a href="https://bulbapedia.bulbagarden.net/wiki/Ground_(type)">
+					<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dg5qlz2-29822020-406b-47b2-984b-31165776ea2d.png/v1/fill/w_894,h_894/poison_type_symbol_paldea_by_jormxdos_dg5qlz2-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiIvZi9lOGRkYzRkYS0yM2RkLTQ1MDItYjY1Yi0zNzhjOWNmZTVlZmEvZGc1cWx6Mi0yOTgyMjAyMC00MDZiLTQ3YjItOTg0Yi0zMTE2NTc3NmVhMmQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.xdAdZHESEq4xGD1ELquaPpPRrLgdYN3vHIvDwuuMPdw" class="card-img-top p-4" alt="Poison">
+                    <div class="card-body text-center">
+                        <span class="badge mb-2" style="font-size: 20px; background-color: #9c57a2">Poison</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-md-2">
+                <div class="card pokemon-card h-100">
+					 <a href="https://bulbapedia.bulbagarden.net/wiki/Rock_(type)">
+					<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dg5qm0p-52b681bb-37b4-4eaa-8347-57a2f8a196e9.png/v1/fill/w_894,h_894/rock_type_symbol_paldea_by_jormxdos_dg5qm0p-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiIvZi9lOGRkYzRkYS0yM2RkLTQ1MDItYjY1Yi0zNzhjOWNmZTVlZmEvZGc1cW0wcC01MmI2ODFiYi0zN2I0LTRlYWEtODM0Ny01N2EyZjhhMTk2ZTkucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.m43q4qZzzl0BNGzJJl2OSB27K5cj_ax36sKx8Nw9XGE" class="card-img-top p-4" alt="Rock">
+                    <div class="card-body text-center">
+                        <span class="badge mb-2" style="font-size: 20px; background-color: #cbc493">Rock</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+           
+        </div>  
+        <br> 
+        <div class="row g-4">
+            <div class="col-md-2">
+                <div class="card pokemon-card h-100">
+                    <a href="https://bulbapedia.bulbagarden.net/wiki/Bug_(type)">
+					<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dg5qm0e-32b857d6-d6e9-47fd-bf4d-2c7dbc724494.png/v1/fill/w_894,h_894/bug_type_symbol_paldea_by_jormxdos_dg5qm0e-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiIvZi9lOGRkYzRkYS0yM2RkLTQ1MDItYjY1Yi0zNzhjOWNmZTVlZmEvZGc1cW0wZS0zMmI4NTdkNi1kNmU5LTQ3ZmQtYmY0ZC0yYzdkYmM3MjQ0OTQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.yN-_17UHum5WQ--XSzdvI6CaJ206J99QDrVTuLsdmJk" class="card-img-top p-4" alt="Bug">
+                    <div class="card-body text-center">
+                        <span class="badge mb-2" style="font-size: 20px; background-color: #c0d330">Bug</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card pokemon-card h-100">
+					 <a href="https://bulbapedia.bulbagarden.net/wiki/Ghost_(type)">
+					<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dg5qm11-29546574-a944-4a8c-ba28-a791e3d9cf74.png/v1/fill/w_894,h_894/ghost_type_symbol_paldea_by_jormxdos_dg5qm11-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiIvZi9lOGRkYzRkYS0yM2RkLTQ1MDItYjY1Yi0zNzhjOWNmZTVlZmEvZGc1cW0xMS0yOTU0NjU3NC1hOTQ0LTRhOGMtYmEyOC1hNzkxZTNkOWNmNzQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Agef9_9wcuXMuzzjhNDFnFLILKkEbzxMXDqHB2pgZR8" class="card-img-top p-4" alt="Ghost">
+                    <div class="card-body text-center">
+                        <span class="badge mb-2" style="font-size: 20px; background-color: #815475">Ghost</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card pokemon-card h-100">
+					 <a href="https://bulbapedia.bulbagarden.net/wiki/Steel_(type)">
+					<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dg5qm1v-582bbe4c-e6b8-46a2-bd75-3ac994d1ce6b.png/v1/fill/w_894,h_894/steel_type_symbol_paldea_by_jormxdos_dg5qm1v-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiIvZi9lOGRkYzRkYS0yM2RkLTQ1MDItYjY1Yi0zNzhjOWNmZTVlZmEvZGc1cW0xdi01ODJiYmU0Yy1lNmI4LTQ2YTItYmQ3NS0zYWM5OTRkMWNlNmIucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.WRxCe3-xME-Q_j7RDLifWgLHnmPO83BnOy_2vDeP1_g" class="card-img-top p-4" alt="Steel">
+                    <div class="card-body text-center">
+                        <span class="badge mb-2" style="font-size: 20px; background-color: #72c3d5">Steel</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card pokemon-card h-100">
+					 <a href="https://bulbapedia.bulbagarden.net/wiki/Fire_(type)">
+					<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dg5qlx5-79647712-dc15-4769-801b-a3833b92bcc5.png/v1/fill/w_894,h_894/fire_type_symbol_paldea_by_jormxdos_dg5qlx5-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiIvZi9lOGRkYzRkYS0yM2RkLTQ1MDItYjY1Yi0zNzhjOWNmZTVlZmEvZGc1cWx4NS03OTY0NzcxMi1kYzE1LTQ3NjktODAxYi1hMzgzM2I5MmJjYzUucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.MEGxuPApKC2U-J1czT2go-8v8i0g2cbQz2e_EdbeITo" class="card-img-top p-4" alt="Fire">
+                    <div class="card-body text-center">
+                        <span class="badge mb-2" style="font-size: 20px; background-color: #f26722">Fire</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-md-2">
+                <div class="card pokemon-card h-100">
+					 <a href="https://bulbapedia.bulbagarden.net/wiki/Water_(type)">
+					<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dg5qlxg-4f7de576-00b3-4f50-a2b1-db1c0419fac9.png/v1/fill/w_894,h_894/water_type_symbol_paldea_by_jormxdos_dg5qlxg-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiIvZi9lOGRkYzRkYS0yM2RkLTQ1MDItYjY1Yi0zNzhjOWNmZTVlZmEvZGc1cWx4Zy00ZjdkZTU3Ni0wMGIzLTRmNTAtYTJiMS1kYjFjMDQxOWZhYzkucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.f5f2r-LJ4i8C9PTzN8y98A97-LS79ueVS8gec7vkp6c" class="card-img-top p-4" alt="Water">
+                    <div class="card-body text-center">
+                        <span class="badge mb-2" style="font-size: 20px; background-color: #0583c2">Water</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-md-2">
+                <div class="card pokemon-card h-100">
+					 <a href="https://bulbapedia.bulbagarden.net/wiki/Grass_(type)">
+					<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dg5qly8-d63a9ac0-ef31-471d-9727-8dd2f0e0011e.png/v1/fill/w_894,h_894/grass_type_symbol_paldea_by_jormxdos_dg5qly8-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiIvZi9lOGRkYzRkYS0yM2RkLTQ1MDItYjY1Yi0zNzhjOWNmZTVlZmEvZGc1cWx5OC1kNjNhOWFjMC1lZjMxLTQ3MWQtOTcyNy04ZGQyZjBlMDAxMWUucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Rh1DaM2qeEDAcNzziANcY216nHa1Ljb2UHruxAO1grA" class="card-img-top p-4" alt="Grass">
+                    <div class="card-body text-center">
+                        <span class="badge mb-2" style="font-size: 20px; background-color: #58b947">Grass</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+              <br>
+                      <div class="row g-4">
+            <div class="col-md-2">
+                <div class="card pokemon-card h-100">
+                    <a href="https://bulbapedia.bulbagarden.net/wiki/Electric_(type)">
+					<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dg5qlxv-6b90331f-9271-412b-9685-1ba51bacbb0a.png/v1/fill/w_894,h_894/electric_type_symbol_paldea_by_jormxdos_dg5qlxv-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiIvZi9lOGRkYzRkYS0yM2RkLTQ1MDItYjY1Yi0zNzhjOWNmZTVlZmEvZGc1cWx4di02YjkwMzMxZi05MjcxLTQxMmItOTY4NS0xYmE1MWJhY2JiMGEucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.8dqSInTFLJuilH34Z0ZWoF6ua91IiH9sWT1MXCP7_Ic" class="card-img-top p-4" alt="Electric">
+                    <div class="card-body text-center">
+                        <span class="badge mb-2" style="font-size: 20px; background-color: #fbdc00">Electric</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card pokemon-card h-100">
+					 <a href="https://bulbapedia.bulbagarden.net/wiki/Psychic_(type)">
+					<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dg5qm06-cbdc5f5f-734b-4b41-971c-6c360aa8c2e4.png/v1/fill/w_894,h_894/psychic_type_symbol_paldea_by_jormxdos_dg5qm06-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiIvZi9lOGRkYzRkYS0yM2RkLTQ1MDItYjY1Yi0zNzhjOWNmZTVlZmEvZGc1cW0wNi1jYmRjNWY1Zi03MzRiLTRiNDEtOTcxYy02YzM2MGFhOGMyZTQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.9ErcpmEEhpMFqw6ZBXV4Z1wGBUcNq8ZsmNm7GHOHKcA" class="card-img-top p-4" alt="Psychic">
+                    <div class="card-body text-center">
+                        <span class="badge mb-2" style="font-size: 20px; background-color: #f16177">Psychic</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card pokemon-card h-100">
+					 <a href="https://bulbapedia.bulbagarden.net/wiki/Ice_(type)">
+					<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dg5qlyn-108be558-76be-42ee-9414-fb4b7a545e2a.png/v1/fill/w_894,h_894/ice_type_symbol_paldea_by_jormxdos_dg5qlyn-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiIvZi9lOGRkYzRkYS0yM2RkLTQ1MDItYjY1Yi0zNzhjOWNmZTVlZmEvZGc1cWx5bi0xMDhiZTU1OC03NmJlLTQyZWUtOTQxNC1mYjRiN2E1NDVlMmEucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.MXJLFHIhS0BkGqzb5KmZtwBARZPO84l9Av1UVu2pLBM" class="card-img-top p-4" alt="Ice">
+                    <div class="card-body text-center">
+                        <span class="badge mb-2" style="font-size: 20px; background-color: #22c1dd">Ice</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="card pokemon-card h-100">
+					 <a href="https://bulbapedia.bulbagarden.net/wiki/Dragon_(type)">
+					<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dg5qm1c-34ee7460-5dc7-42d9-ba8e-fa021afeb7e2.png/v1/fill/w_894,h_894/dragon_type_symbol_paldea_by_jormxdos_dg5qm1c-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiIvZi9lOGRkYzRkYS0yM2RkLTQ1MDItYjY1Yi0zNzhjOWNmZTVlZmEvZGc1cW0xYy0zNGVlNzQ2MC01ZGM3LTQyZDktYmE4ZS1mYTAyMWFmZWI3ZTIucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.5vPOKg7Z3XkWEDYhcLdiC2ap89ciup72bwVIMqKZzcU" class="card-img-top p-4" alt="Dragon">
+                    <div class="card-body text-center">
+                        <span class="badge mb-2" style="font-size: 20px; background-color: #406daa">Dragon</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-md-2">
+                <div class="card pokemon-card h-100">
+					 <a href="https://bulbapedia.bulbagarden.net/wiki/Dark_(type)">
+					<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dg5qm1n-f4069a9e-e365-418a-ae38-e2507d423e7a.png/v1/fill/w_894,h_894/dark_type_symbol_paldea_by_jormxdos_dg5qm1n-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiIvZi9lOGRkYzRkYS0yM2RkLTQ1MDItYjY1Yi0zNzhjOWNmZTVlZmEvZGc1cW0xbi1mNDA2OWE5ZS1lMzY1LTQxOGEtYWUzOC1lMjUwN2Q0MjNlN2EucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.4QnY7E3ZszD6HFXs_XpznQGnDfTzO8C-uB45XLTaNSs" class="card-img-top p-4" alt="Dark">
+                    <div class="card-body text-center">
+                        <span class="badge mb-2" style="font-size: 20px; background-color: #60504d">Dark</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-md-2">
+                <div class="card pokemon-card h-100">
+					 <a href="https://bulbapedia.bulbagarden.net/wiki/Fairy_(type)">
+					<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dg5qm20-07e927c1-9c89-4f63-bff3-4250782c09ad.png/v1/fill/w_894,h_894/fairy_type_symbol_paldea_by_jormxdos_dg5qm20-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiIvZi9lOGRkYzRkYS0yM2RkLTQ1MDItYjY1Yi0zNzhjOWNmZTVlZmEvZGc1cW0yMC0wN2U5MjdjMS05Yzg5LTRmNjMtYmZmMy00MjUwNzgyYzA5YWQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.1e4soLEtVOuPkkhTRLVuH_lzk5Vuw1VN95vkztT7K7Q" class="card-img-top p-4" alt="Fairy">
+                    <div class="card-body text-center">
+                        <span class="badge mb-2" style="font-size: 20px; background-color: #ecb1d1">Fairy</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+              <br>
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p class="mb-0">&copy; 2025 Pokémon Fan Page | Built with Bootstrap</p>
+        <p class="mb-0">Images courtesy of <a href="https://www.deviantart.com/jormxdos">JorMxDos</a></p>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
